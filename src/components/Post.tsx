@@ -1,13 +1,30 @@
-import { useState } from 'react';
+import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react';
 import { Avatar } from './Avatar';
 import { Comment } from './Comment';
 import { format, formatDistanceToNow } from 'date-fns';
-import enNZ from 'date-fns/locale/en-GB';
+import { enNZ } from 'date-fns/locale';
 
 import styles from './Post.module.css';
 
-export function Post({ author, publishedAt, content }) {
-  const [comments, setComments] = useState(['Well done Devon, congrats!! 👏']);
+type Author = {
+  name: string;
+  avatarUrl: string;
+  role: string;
+};
+
+type Content = {
+  type: 'paragraph' | 'link';
+  content: string;
+};
+
+type PostProps = {
+  author: Author;
+  publishedAt: Date;
+  content: Content[];
+};
+
+export function Post({ author, publishedAt, content }: PostProps) {
+  const [comments, setComments] = useState(['Well done, congrats!!']);
 
   const [newCommentText, setNewCommentText] = useState('');
 
@@ -24,18 +41,18 @@ export function Post({ author, publishedAt, content }) {
     addSuffix: true,
   });
 
-  function handleCreateNewComment(event) {
+  function handleCreateNewComment(event: FormEvent) {
     event.preventDefault();
     setComments([...comments, newCommentText]);
     setNewCommentText('');
   }
 
-  function handleNewCommentChange(event) {
+  function handleNewCommentChange(event: ChangeEvent<HTMLTextAreaElement>) {
     event.target.setCustomValidity('');
     setNewCommentText(event.target.value);
   }
 
-  function deleteComment(commentToDelete) {
+  function deleteComment(commentToDelete: string) {
     const commentsWithoutDeletedOne = comments.filter((comment) => {
       return comment !== commentToDelete;
     });
@@ -43,7 +60,7 @@ export function Post({ author, publishedAt, content }) {
     setComments(commentsWithoutDeletedOne);
   }
 
-  function handleInvalidComment(event) {
+  function handleInvalidComment(event: InvalidEvent<HTMLTextAreaElement>) {
     event.target.setCustomValidity('You must enter a comment');
   }
 

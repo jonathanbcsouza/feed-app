@@ -3,7 +3,12 @@ import { Avatar } from './Avatar';
 import { HandsClapping, Trash } from 'phosphor-react';
 import styles from './Comment.module.css';
 
-export function Comment({ content, onDeleteComment }) {
+type CommentProps = {
+  content: string;
+  onDeleteComment: (comment: string) => void;
+};
+
+export function Comment({ content, onDeleteComment }: CommentProps) {
   const [clapsCount, setClapsCount] = useState(0);
 
   function handleDelete() {
