@@ -14,9 +14,9 @@ This is an exercise project from the Rocketseat course. The project is a simple 
 
 To get the project up and running, follow these steps:
 
-1. Clone the repository
+1. Clone this repository
 2. Navigate into the project directory: `cd feed-app`
 3. Install the dependencies: `npm install`
-4. Start the development server: `npm start`
+4. Start the development server: `npm run dev`
 
 Now, you should be able to see the project running at localhost:5173 in your browser.
