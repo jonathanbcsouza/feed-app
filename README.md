@@ -1,10 +1,10 @@
 ### Feed App
 
-This is an exercise project from the Rocketseat course. The project is a simple feed application where users can post and view posts. The project has been migrated to TypeScript for static typing and improved developer experience.
+This is an exercise project from Rocketseat tutorials. The project is a simple feed application where users can post and view posts.
 
 ### Technologies Used
 
-- **CSS Modules**: Classes names and animation names are scoped locally by default. This helps us to modularize and compose our CSS.
+- **CSS Modules**: Classes names and animation names are scoped locally by default. This helps us to modularize and compose CSS.
 - **date-fns**: A modern JavaScript date utility library, used in this project to handle and format dates.
 - **phosphor-react**: A flexible icon family for interfaces, diagrams, presentations — whatever, really. We use it in this project to add icons to our user interface.
 
