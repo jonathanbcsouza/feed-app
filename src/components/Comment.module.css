@@ -66,10 +66,8 @@
   border: 0;
   color: var(--gray-400);
   cursor: pointer;
-
   display: flex;
   align-items: center;
-
   border-radius: 2px;
 }
 
