@@ -46,7 +46,7 @@ export function Comment({ content, onDeleteComment }) {
         <footer>
           <button onClick={handleClapsCounter}>
             <HandsClapping />
-            Plause <span>{clapsCount}</span>
+            Clap <span>{clapsCount}</span>
           </button>
         </footer>
       </div>

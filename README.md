@@ -14,7 +14,7 @@ This is an exercise project from the Rocketseat course. The project is a simple 
 
 To get the project up and running, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/yourusername/feed-app.git`
+1. Clone the repository
 2. Navigate into the project directory: `cd feed-app`
 3. Install the dependencies: `npm install`
 4. Start the development server: `npm start`

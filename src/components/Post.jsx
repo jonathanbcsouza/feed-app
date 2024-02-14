@@ -24,9 +24,8 @@ export function Post({ author, publishedAt, content }) {
     addSuffix: true,
   });
 
-  function handleCreateNewComment() {
+  function handleCreateNewComment(event) {
     event.preventDefault();
-
     setComments([...comments, newCommentText]);
     setNewCommentText('');
   }
